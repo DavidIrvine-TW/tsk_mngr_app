@@ -1,0 +1,43 @@
+@layer components {
+    .Nav__theme {
+    @apply border-darksecondary bg-lghtsecondary dark:bg-drkbackground-950;
+    }
+
+    .Nav__theme-txt {
+    @apply text-lghttext dark:text-darktext;
+    }
+
+    .Nav__items-position {
+    @apply flex flex-row items-center;
+    }
+
+    .Nav__btn-theme {
+    @apply bg-lghtaccent dark:bg-drksecondary-800  hover:dark:bg-drksecondary-900 hover:bg-accent-300;
+    }
+
+    .Nav__theme-switch-cont {
+        @apply w-[235px] mx-auto  rounded mt-[1rem] flex items-center justify-center
+    }
+    .Nav__theme-switch-cont-inner {
+        @apply flex rounded items-center justify-between w-full mx-auto p-2 border bg-lghtbackground 
+        border-lghtaccent dark:border-darksecondary dark:bg-darkbackground
+    }
+    .SideNav {
+        @apply transition-all duration-500 dk:w-[300px] tb:w-[260px] border-r p-[1rem]
+        hidden tb:inline-flex dk:inline-flex fade-in flex-col pb-[2rem] fixed z-10
+    }
+    .SideNav__btn {
+        @apply w-full flex items-center space-x-4 px-5 py-4 rounded
+    }
+    .SideNav__btn-active {
+        @apply bg-lghtaccent text-darktext dark:bg-drksecondary-800 shadow-md 
+    }
+    .SideNav__btn-inactive {
+        @apply hover:bg-secondary-200 hover:dark:bg-drksecondary-900 dark:text-drksecondary-700
+    }
+    .SideNav__btn-reveal {
+        @apply absolute bottom-[2rem] right-[-4rem] cursor-pointer bg-darkbackground text-white dark:text-lghttext 
+        dark:bg-darkprimary rounded p-1 hover:scale-110 transition duration-200
+    }
+}
+

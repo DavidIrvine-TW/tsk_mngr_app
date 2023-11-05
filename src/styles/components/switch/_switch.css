@@ -1,0 +1,15 @@
+@layer components {
+    .Switch__label {
+        @apply flex items-center relative w-[44px] h-[24px]
+    }
+    .Switch__input {
+        @apply  opacity-0 w-0 h-0
+    }  
+    .Switch__span {
+        @apply absolute cursor-pointer inset-0 rounded-[12px] bg-lghtsecondary dark:bg-drkbackground-950 before:absolute 
+        before:content-[''] before:h-[20px] before:w-[20px] before:rounded-full before:left-[2px] 
+        before:bottom-[2px] before:bg-black peer-focus-visible:bg-violet-500 peer-checked:before:translate-x-[20px] 
+        before:transition-all
+    } 
+
+}

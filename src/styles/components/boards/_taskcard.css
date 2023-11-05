@@ -1,0 +1,16 @@
+@layer components {
+    .Taskcard {
+        @apply  flex flex-col cursor-pointer hover:cursor-grab border  
+        px-[1rem] py-[1.5rem] rounded shadow-md w-[280px] hover:opacity-60 bg-lghtbackground 
+        dark:bg-drkbackground-950 dark:border-darksecondary dark:text-drksecondary-700 mb-[1rem]
+    }    
+    .Taskcard__subtasks-txt {
+        @apply font-bold text-xs mt-2 text-gray-500
+    }
+}
+@layer components {
+    .Subtask {
+        @apply w-full flex rounded relative items-center justify-start p-2 gap-[1rem] bg-lghtsecondary dark:bg-drkbackground-100
+    }
+
+}

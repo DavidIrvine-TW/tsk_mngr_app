@@ -1,0 +1,44 @@
+@layer components {
+    .Modal {
+        @apply fade-in absolute top-0 right-0 left-0 bottom-0 bg-zinc-500 dark:bg-accent-300 
+        dark:bg-opacity-20 bg-opacity-60 z-20 flex items-center justify-center
+    }
+    .ModalClearBg {
+        @apply fade-in absolute top-0 right-0 left-0 bottom-0 z-20 
+    }
+    .Modal__form {
+        @apply w-[345px] tb:w-[480px] rounded bg-lghtbackground dark:bg-drkbackground-950 shadow-md p-6
+    }
+    .Modal__form-head {
+        @apply flex justify-between items-center mb-[1.5rem] dark:text-drksecondary-700
+    }
+    .Modal__form-close-btn {
+        @apply border rounded-full p-1 hover:scale-105 
+    }
+    .Modal__formfield-label {
+        @apply text-sm mb-[.5rem] dark:text-gray-500 font-bold
+    }
+    .Modal__form-input {
+        @apply border text-body-l p-2 rounded w-full
+    }
+    .Modal__delete {
+        @apply hover:text-red-500 hover:scale-110 dark:text-gray-500 hover:dark:text-red-500
+    }
+    .Modal__btn-secondary {
+        @apply bg-lghtsecondary hover:bg-secondary-50 dark:bg-drksecondary-300 hover:dark:bg-secondary-200 dark:border-darksecondary
+    }
+    .Modal__btn-primary {
+        @apply bg-lghtaccent hover:bg-accent-300 dark:bg-drksecondary-800  hover:dark:bg-drksecondary-900 dark:border-darksecondary hover:dark:text-darktext  text-lghttext font-bold shadow-md
+    }
+    .Modal__btn {
+        @apply border flex items-center justify-center py-2 rounded
+    }
+    .Modal__form-error {
+        @apply text-red-500 text-body-md mt-[4px]
+    }
+    .Modal__focus {
+        @apply focus:ring focus:ring-lghtaccent focus:outline-none transition-all duration-300
+    }
+    
+}
+

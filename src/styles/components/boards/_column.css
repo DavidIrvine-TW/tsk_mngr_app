@@ -1,0 +1,20 @@
+@layer components {
+    .Column {
+        @apply w-[296px] mr-[1.5rem] rounded flex flex-col gap-[1rem] p-[.5rem] 
+    }
+    .Column__empty {
+        @apply border-dashed border-2 dark:border-darksecondary 
+    }
+    .Column__cont-title {
+        @apply flex gap-[1rem] items-center
+    }
+    .Column__ball {
+        @apply rounded-full w-[1rem] h-[1rem] 
+    }
+    .Column__title {
+        @apply flex items-center gap-[.5rem] dark:text-darktext uppercase tracking-[2px]
+    }
+    .Column__cont-droppable {
+        @apply w-full h-full flex flex-col 
+    }
+}

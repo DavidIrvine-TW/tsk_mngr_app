@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+/* basics */
+@import './styles/_reset.css';
+@import './styles/_animations.css';
+
+/* navigation */
+@import "./styles/components/nav/_nav.css";
+@import "./styles/components/switch/_switch.css";
+
+/* modals */
+@import "./styles/components/modals/_modal.css";
+
+/* board */
+@import "./styles/components/boards/_column.css";
+@import "./styles/components/boards/_taskcard.css";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+  .Main {
+    height: calc(100vh - 6rem);
+  }
+  @media screen and (max-width: 768px) {
+  .Main {
+    height: calc(100vh - 4rem);
+    overflow-x: auto !important;
+  }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1440px) {
+  .Main {
+    height: calc(100vh - 5rem);
+  }
+  }
+
+
+
+
+
+
+
+.card {
+  /* border: 1px solid green; */
+  /* margin: 1rem; */
+  /* height: 100px; */
+  margin-bottom: 1rem
+}
+.column {
+  display: flex;
+  flex-direction: column; 
+}
