@@ -120,9 +120,10 @@ const TaskModal = ({ modalDetail }) => {
 
         <div>
           <button
-            className={`border py-2 rounded bg-lghtaccent hover:bg-accent-300 dark:bg-drksecondary-800  hover:dark:bg-drksecondary-900 
-              dark:border-darksecondary hover:dark:text-darktext  
-                text-lghttext font-bold shadow-md w-full mt-[2rem]`}
+          className={isDisabled ? "Modal__btn-primary-disabled" : ' Modal__btn-primary'}
+            // className={`border py-2 rounded bg-lghtaccent hover:bg-accent-300 dark:bg-drksecondary-800  hover:dark:bg-drksecondary-900 
+            //   dark:border-darksecondary hover:dark:text-darktext  
+            //     text-lghttext font-bold shadow-md w-full mt-[2rem]`}
                 
             onClick={onSubmitHandler}
             type="submit"

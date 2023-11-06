@@ -51,7 +51,7 @@ const SideNav = ({ setSideNavOpen, sideNavOpen, allData, data }) => {
 
 
       {/* list all boards*/}
-      <div className=" min-h-[300px] overflow-y-auto ">
+      <div className="h-[300px] overflow-y-auto">
         {allData.map((board, index) => (
           <button
             key={index}
