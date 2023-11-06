@@ -37,11 +37,13 @@ const boardsSlice = createSlice({
 
     deleteTask: (state, action) => {
       const { columnIndex, taskIndex } = action.payload;
-      return state.map(board => {
+      return state.map((board) => {
         if (board.isActive) {
           const updatedColumns = board.columns.map((col, i) => {
             if (i === columnIndex) {
-              const updatedTasks = col.tasks.filter((task, j) => j !== taskIndex);
+              const updatedTasks = col.tasks.filter(
+                (task, j) => j !== taskIndex
+              );
               return { ...col, tasks: updatedTasks };
             }
             return col;
@@ -52,7 +54,7 @@ const boardsSlice = createSlice({
       });
     },
 
-    addTask: (state, action) => { 
+    addTask: (state, action) => {
       const {
         taskTitle,
         status,
@@ -61,7 +63,7 @@ const boardsSlice = createSlice({
         statusIndex,
         taskId,
       } = action.payload;
-      console.log(statusIndex)
+      console.log(statusIndex);
       return state.map((board) => {
         if (board.isActive) {
           const updatedColumns = board.columns.map((col, i) => {
@@ -82,20 +84,33 @@ const boardsSlice = createSlice({
           });
           return { ...board, columns: updatedColumns };
         }
-        return board;        
+        return board;
       });
     },
 
-
     editTask: (state, action) => {
-      const { taskTitle, status, taskDescription, subtasks, columnIndex, statusIndex, taskIndex } = action.payload;
-      return state.map(board => {
+      const {
+        taskTitle,
+        status,
+        taskDescription,
+        subtasks,
+        columnIndex,
+        statusIndex,
+        taskIndex,
+      } = action.payload;
+      return state.map((board) => {
         if (board.isActive) {
           const updatedColumns = board.columns.map((col, i) => {
             if (i === columnIndex) {
               const updatedTasks = col.tasks.map((task, j) => {
                 if (j === taskIndex) {
-                  return { ...task, title: taskTitle, status: status, description: taskDescription, subtasks: subtasks };
+                  return {
+                    ...task,
+                    title: taskTitle,
+                    status: status,
+                    description: taskDescription,
+                    subtasks: subtasks,
+                  };
                 }
                 return task;
               });
@@ -103,10 +118,14 @@ const boardsSlice = createSlice({
             }
             return col;
           });
-          if (columnIndex === statusIndex) return { ...board, columns: updatedColumns };
+          if (columnIndex === statusIndex)
+            return { ...board, columns: updatedColumns };
           const newColumns = board.columns.map((col, i) => {
             if (i === statusIndex) {
-              const updatedTasks = [...col.tasks, updatedColumns[columnIndex].tasks[taskIndex]];
+              const updatedTasks = [
+                ...col.tasks,
+                updatedColumns[columnIndex].tasks[taskIndex],
+              ];
               return { ...col, tasks: updatedTasks };
             }
             return col;
@@ -116,33 +135,19 @@ const boardsSlice = createSlice({
         return board;
       });
     },
-    
 
-     dragTask: (state, action) => {
-      const { newColumn, newBoard, board, newTask, newColId } = action.payload;
-      const updatedState = state.map((currentBoard) => {
-        if (currentBoard.isActive) {
-          const updatedColumns = currentBoard.columns.map((column) => {
-            if (column.column_id === newColId) {
-              return { ...newColumn };
-            }
-            return column;
-          });
-          return { ...currentBoard, columns: updatedColumns };
+    dragTask: (state, action) => {
+      const { newBoardId, newBoard } = action.payload;
+
+      const updatedState = state.map((board) => {
+        if (board.board_id === newBoardId) {
+          return newBoard;
         }
-        return currentBoard;
+        return board;
       });
+
       return updatedState;
     },
-  
-    
-    
-    
-    
-    
-    
-    
-
 
     editBoard: (state, action) => {
       const { boardName, createdColumns } = action.payload;

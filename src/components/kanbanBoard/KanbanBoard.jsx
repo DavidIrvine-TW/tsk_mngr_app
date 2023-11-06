@@ -7,6 +7,7 @@ import AddIcon from "@mui/icons-material/Add";
 import Sidebar from "../navstuff/SideNav";
 import { modalIsOpen } from "../../redux/modalSlice";
 import EmptyBoard from "../emptyboard/EmptyBoard";
+import boardsSlice from "../../redux/boardsSlice";
 
 const KanbanBoard = ({ data, setData, allData }) => {
   const [sideNavOpen, setSideNavOpen] = useState(true);
@@ -56,15 +57,12 @@ const KanbanBoard = ({ data, setData, allData }) => {
         columns: newColumns,
       };
 
-      // dispatch(
-      //   boardsSlice.actions.dragTask({
-      //     board: board.board_id,
-      //     newBoard: newBoard,
-      //     newTask: draggedTask,
-      //     newColumn: newColumn,
-      //     newColId: sourceColumn.column_id,
-      //   })
-      // );
+      dispatch(
+        boardsSlice.actions.dragTask({
+          newBoardId: newBoard.board_id,
+          newBoard: newBoard,
+        })
+      );
 
       setData(newBoard);
       return;
@@ -98,6 +96,13 @@ const KanbanBoard = ({ data, setData, allData }) => {
       ...data,
       columns: updatedColumns,
     };
+
+    dispatch(
+      boardsSlice.actions.dragTask({
+        newBoardId: newBoard.board_id,
+        newBoard: newBoard,
+      })
+    );
 
     setData(newBoard);
   };
