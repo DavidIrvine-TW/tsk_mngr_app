@@ -48,7 +48,8 @@ const AllModals = () => {
         <DeleteEditTaskModal {...grabModal} />
       )}
 
-      {grabModal.type === "task" && <TaskModal {...grabModal} />}
+      {grabModal.type === "task" && (
+        <TaskModal {...grabModal} />)}
     </>
   );
 };

@@ -145,7 +145,7 @@ const AddEditTaskModal = ({
     >
       <form
         onSubmit={onSubmit}
-        className="Modal__form"
+        className="Modal__form max-h-[650px] overflow-y-auto tb:overflow-y-hidden"
       >
         <div 
           className="Modal__form-head">
@@ -170,7 +170,7 @@ const AddEditTaskModal = ({
             className="Modal__formfield-label">
             Title*
           </label>
-          <div className="border">
+          <div className="border rounded">
             <input
               value={taskTitle}
               onChange={(e) => setTaskTitle(e.target.value)}
@@ -193,12 +193,12 @@ const AddEditTaskModal = ({
             className="Modal__formfield-label">
             Description (optional)
           </label>
-          <div className="border rounded overflow-hidden">
+          <div className="rounded overflow-hidden">
           <textarea
             value={taskDescription}
             onChange={(e) => setTaskDescription(e.target.value)}
             id="task-description"
-            className=" border p-2 max-h-[100px] text-body-l rounded w-full  "
+            className=" p-2 max-h-[150px] text-body-l rounded w-full  "
             placeholder="enter a brief description of the task"
           />
           </div>

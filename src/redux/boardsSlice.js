@@ -118,6 +118,7 @@ const boardsSlice = createSlice({
             }
             return col;
           });
+          
           if (columnIndex === statusIndex)
             return { ...board, columns: updatedColumns };
           const newColumns = board.columns.map((col, i) => {

@@ -10,8 +10,10 @@ import EmptyBoard from "../emptyboard/EmptyBoard";
 import boardsSlice from "../../redux/boardsSlice";
 
 const KanbanBoard = ({ data, setData, allData }) => {
+
   const [sideNavOpen, setSideNavOpen] = useState(true);
   const dispatch = useDispatch();
+
 
  const onDragEnd = (result) => {
     const { destination, source } = result;
@@ -107,8 +109,6 @@ const KanbanBoard = ({ data, setData, allData }) => {
     setData(newBoard);
   };
 
-
-  console.log(data)
   return (
     <ScrollContainer
       nativeMobileScroll={true}
