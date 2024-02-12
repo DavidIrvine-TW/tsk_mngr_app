@@ -4,7 +4,7 @@ import MoreVertTwoToneIcon from "@mui/icons-material/MoreVertTwoTone";
 import DeleteEditTaskModal from "./DeleteEditTaskModal";
 import Subtask from "../Subtask"
 import boardsSlice from "../../redux/boardsSlice";
-import { modalIsClosed } from "../../redux/modalSlice";
+import { modalIsClosed } from "../../redux/modalslice";
 
 const TaskModal = ({ modalDetail }) => {
  
@@ -120,11 +120,7 @@ const TaskModal = ({ modalDetail }) => {
 
         <div>
           <button
-          className={isDisabled ? "Modal__btn-primary-disabled" : ' Modal__btn-primary'}
-            // className={`border py-2 rounded bg-lghtaccent hover:bg-accent-300 dark:bg-drksecondary-800  hover:dark:bg-drksecondary-900 
-            //   dark:border-darksecondary hover:dark:text-darktext  
-            //     text-lghttext font-bold shadow-md w-full mt-[2rem]`}
-                
+            className={isDisabled ? "Modal__btn-primary-disabled" : ' Modal__btn-primary'}                
             onClick={onSubmitHandler}
             type="submit"
             disabled={isDisabled}

@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import AddIcon from "@mui/icons-material/Add";
 import boardsSlice from "../../redux/boardsSlice";
 import CloseIcon from "@mui/icons-material/Close";
-import { modalIsClosed } from "../../redux/modalSlice";
+import { modalIsClosed } from "../../redux/modalslice";
 
 const AddEditBoardModal = ({ type, modalDetail }) => {
   
@@ -23,7 +23,7 @@ const AddEditBoardModal = ({ type, modalDetail }) => {
       column_id: uuidv4(),
     },
   ]);
-
+  const boards = useSelector((state) => state.boards)
   const board = useSelector((state) => state.boards).find(
     (board) => board.isActive
   );
@@ -88,7 +88,9 @@ const AddEditBoardModal = ({ type, modalDetail }) => {
     
     if (isFormValid) {
       if (type === "add") {
-        dispatch(boardsSlice.actions.addBoard({ boardName, createdColumns }));
+        const index = boards.length + 1
+        dispatch(boardsSlice.actions.addBoard({ boardName, createdColumns, index }));   
+       
       } else if (type === "edit") {
         dispatch(boardsSlice.actions.editBoard({ boardName, createdColumns }));
       }

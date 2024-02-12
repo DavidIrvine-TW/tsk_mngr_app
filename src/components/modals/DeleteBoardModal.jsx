@@ -1,7 +1,7 @@
 import React from "react";
 import boardsSlice from "../../redux/boardsSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { modalIsClosed, modalIsOpen } from "../../redux/modalSlice";
+import { modalIsClosed, modalIsOpen } from "../../redux/modalslice";
 
 const DeleteBoardModal = ({
   type,

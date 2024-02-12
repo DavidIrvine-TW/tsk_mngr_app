@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import KanbanBoard from './components/kanbanBoard/KanbanBoard'
 import Nav from "./components/navstuff/Nav";
 import AllModals from './components/modals/Allmodals'
-
-
+import { ToastContainer } from 'react-toastify';
+import boardsSlice from "./redux/boardsSlice";
 
 
 function App() {
@@ -34,6 +34,18 @@ function App() {
       <Nav allData={allData} data={data}/>
       <AllModals/>
       <KanbanBoard data={data} setData={setData} allData={allData}/>
+      <ToastContainer
+            position="bottom-right"
+            autoClose={2000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+          />
          
     </div>
   );

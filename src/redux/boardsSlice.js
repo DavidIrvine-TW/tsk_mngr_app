@@ -63,7 +63,7 @@ const boardsSlice = createSlice({
         statusIndex,
         taskId,
       } = action.payload;
-      console.log(statusIndex);
+
       return state.map((board) => {
         if (board.isActive) {
           const updatedColumns = board.columns.map((col, i) => {
@@ -214,17 +214,29 @@ const boardsSlice = createSlice({
     },
 
     addBoard: (state, action) => {
-      const isActive = state.length > 0 ? false : true; // if no boards, initial board is active
       const { boardName, createdColumns } = action.payload;
-      const board = {
+      const newBoard = {
         name: boardName,
-        isActive,
+        isActive: true, // Set the new board's isActive to true
         columns: createdColumns,
         board_id: uuidv4(),
       };
-
-      return [...state, board];
+    
+      // Set isActive to false for all other boards
+      const updatedState = state.map((board) => ({ ...board, isActive: false }));
+    
+      // Add the new board to the state
+      updatedState.push(newBoard);
+    
+      return updatedState;
     },
+    
+
+    useUserFireBaseData: (state, action) => {
+      const {userData}= action.payload
+      return userData
+      
+    }
   },
 });
 

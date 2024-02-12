@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { modalIsClosed, modalIsOpen } from "../../redux/modalSlice";
+import { modalIsClosed, modalIsOpen } from "../../redux/modalslice";
 
 const DeleteEditMenuModal = ({
   taskData,
@@ -16,6 +16,7 @@ const DeleteEditMenuModal = ({
         dark:border-darksecondary shadow-md"
     >
       <div className="flex flex-col gap-[1rem]">
+
         <button
           onClick={() => {
             dispatch(modalIsClosed({ type: "" }));
@@ -37,7 +38,6 @@ const DeleteEditMenuModal = ({
 
         <button
           onClick={() => {
-            setElippsesMenu(false);
             dispatch(modalIsClosed({ type: "" }));
             dispatch(
               modalIsOpen({
@@ -54,6 +54,7 @@ const DeleteEditMenuModal = ({
         >
           Delete Task
         </button>
+        
       </div>
     </article>
   );

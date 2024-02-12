@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import useToggle from "../../hooks/useToggle";
 import boardsSlice from "../../redux/boardsSlice";
-import { modalIsOpen } from "../../redux/modalSlice";
+import { modalIsOpen } from "../../redux/modalslice";
 
 const SideNav = ({ setSideNavOpen, sideNavOpen, allData, data }) => {
   
@@ -38,7 +38,7 @@ const SideNav = ({ setSideNavOpen, sideNavOpen, allData, data }) => {
     <article
       id="sidenav"
       style={{ height: "calc(100vh - 6rem)" }}
-      className={`Nav__theme SideNav ${
+      className={`Nav__theme SideNav border ${
         sideNavOpen ? "" : "transform -translate-x-full "
       }`}
     >

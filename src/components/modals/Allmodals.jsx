@@ -4,6 +4,7 @@ import BoardsMenuModal from "./BoardsMenuModal";
 import DeleteBoardModal from "./DeleteBoardModal";
 import DeleteEditMenuModal from "./DeleteEditMenuModal";
 import DeleteEditTaskModal from "./DeleteEditTaskModal";
+import SignInModal from "./SignInModal";
 import TaskModal from "./TaskModal";
 import { useSelector } from "react-redux";
 
@@ -50,7 +51,13 @@ const AllModals = () => {
 
       {grabModal.type === "task" && (
         <TaskModal {...grabModal} />)}
+
+      {grabModal.type === "signin" && (
+        <SignInModal {...grabModal}/>)}
+
     </>
+
+      
   );
 };
 

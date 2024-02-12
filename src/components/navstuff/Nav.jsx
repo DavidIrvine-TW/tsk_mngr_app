@@ -3,13 +3,15 @@ import MoreVertTwoToneIcon from "@mui/icons-material/MoreVertTwoTone";
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 import AddIcon from "@mui/icons-material/Add";
 import { useSelector, useDispatch } from "react-redux";
-import { modalIsOpen } from "../../redux/modalSlice";
+import { modalIsOpen } from "../../redux/modalslice";
 import { useState } from "react";
+import { useAuth } from "../loggingIn/AuthContext";
 
 const Nav = ({ data, allData }) => {
   const [anim, setAnim] = useState(false);
   const dispatch = useDispatch();
-
+  const { user } = useAuth();
+  console.log(user);
 
   return (
     <header>
@@ -82,6 +84,10 @@ const Nav = ({ data, allData }) => {
                 New Task
               </span>
             </button>
+
+
+
+            
 
             {/* elip menu */}
             <button

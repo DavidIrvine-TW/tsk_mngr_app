@@ -5,7 +5,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { useDispatch, useSelector } from "react-redux";
 import boardsSlice from "../../redux/boardsSlice";
 import CloseIcon from '@mui/icons-material/Close';
-import { modalIsClosed } from "../../redux/modalSlice";
+import { modalIsClosed } from "../../redux/modalslice";
 
 const AddEditTaskModal = ({
   type,
@@ -145,7 +145,7 @@ const AddEditTaskModal = ({
     >
       <form
         onSubmit={onSubmit}
-        className="Modal__form max-h-[650px] overflow-y-auto tb:overflow-y-hidden"
+        className="Modal__form max-h-[650px] tb:max-h-[700px] overflow-y-auto"
       >
         <div 
           className="Modal__form-head">

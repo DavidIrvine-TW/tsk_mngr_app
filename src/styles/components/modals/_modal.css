@@ -10,7 +10,7 @@
         @apply w-[345px] tb:w-[480px] rounded bg-lghtbackground dark:bg-drkbackground-950 shadow-md p-6
     }
     .Modal__form-head {
-        @apply flex justify-between items-center mb-[1.5rem] dark:text-drksecondary-700
+        @apply flex justify-between items-center mb-[1rem] dark:text-drksecondary-700
     }
     .Modal__form-close-btn {
         @apply border rounded-full p-1 hover:scale-105 
