@@ -35,7 +35,7 @@ const BoardsMenuModal = () => {
       }}
     >
       
-      <article className="w-[265px] rounded bg-lghtbackground text-lghttext  dark:bg-drkbackground-950 shadow-md p-4">
+      <article className="w-[265px] rounded bg-lghtbackground text-lghttext  dark:bg-drkbackground-950 shadow-md p-4 flex flex-col gap-[.5rem]">
 
 
         <h2 className="tracking-[2.4px] text-sm mb-[1rem] px-4 dark:text-darktext">

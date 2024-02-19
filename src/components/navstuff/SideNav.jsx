@@ -38,7 +38,7 @@ const SideNav = ({ setSideNavOpen, sideNavOpen, allData, data }) => {
     <article
       id="sidenav"
       style={{ height: "calc(100vh - 6rem)" }}
-      className={`Nav__theme SideNav border ${
+      className={`Nav__theme SideNav border-l ${
         sideNavOpen ? "" : "transform -translate-x-full "
       }`}
     >
@@ -51,7 +51,7 @@ const SideNav = ({ setSideNavOpen, sideNavOpen, allData, data }) => {
 
 
       {/* list all boards*/}
-      <div className="h-[300px] overflow-y-auto">
+      <div className="h-[300px] overflow-y-auto border ">
         {allData.map((board, index) => (
           <button
             key={index}

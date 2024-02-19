@@ -28,13 +28,13 @@
         @apply bg-lghtsecondary hover:bg-secondary-50 dark:bg-drksecondary-300 hover:dark:bg-secondary-200 dark:border-darksecondary
     }
     .Modal__btn-primary {
-        @apply w-full mt-[1rem] rounded py-2 bg-lghtaccent hover:bg-accent-300 dark:bg-drksecondary-800  hover:dark:bg-drksecondary-900 dark:border-darksecondary hover:dark:text-darktext  text-lghttext font-bold shadow-md
+        @apply w-full  rounded py-2 bg-lghtaccent hover:bg-accent-300 dark:bg-drksecondary-800  hover:dark:bg-drksecondary-900 dark:border-darksecondary hover:dark:text-darktext  text-lghttext font-bold shadow-md
     }
     .Modal__btn-primary-disabled {
         @apply w-full mt-[1rem] rounded py-2 bg-gray-300 text-lghttext font-bold shadow-md
     }
     .Modal__btn {
-        @apply border flex items-center justify-center py-2 rounded
+        @apply border flex items-center justify-start gap-[.5rem] py-2 pl-[.5rem] rounded w-full h-full
     }
     .Modal__form-error {
         @apply text-red-500 text-body-md mt-[4px]
