@@ -188,17 +188,17 @@ const AddEditTaskModal = ({
 
         {/* task description */}
         <div 
-          className="flex flex-col mt-[1.5rem] ">
+          className="flex flex-col mt-[1.5rem]">
           <label 
             className="Modal__formfield-label">
             Description (optional)
           </label>
-          <div className="rounded overflow-hidden">
+          <div className="rounded overflow-hidden border">
           <textarea
             value={taskDescription}
             onChange={(e) => setTaskDescription(e.target.value)}
             id="task-description"
-            className=" p-2 max-h-[150px] text-body-l rounded w-full  "
+            className=" p-2 max-h-[150px] text-body-l border w-full  "
             placeholder="enter a brief description of the task"
           />
           </div>
