@@ -46,7 +46,7 @@ const BoardsMenuModal = () => {
         {boards.map((board, index) => (
           <button
             key={index}
-            className={`Modal__btn ${
+            className={`Modal__btn-mob ${
               board.isActive ? "Modal__btn-primary " : "Modal__btn-secondary"
             }`}
             onClick={() => {

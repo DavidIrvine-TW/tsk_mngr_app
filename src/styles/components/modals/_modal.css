@@ -34,6 +34,9 @@
         @apply w-full mt-[1rem] rounded py-2 bg-gray-300 text-lghttext font-bold shadow-md
     }
     .Modal__btn {
+        @apply border flex items-center justify-center gap-[.5rem] py-2 pl-[.5rem] rounded w-full h-full
+    }
+    .Modal__btn-mob {
         @apply border flex items-center justify-start gap-[.5rem] py-2 pl-[.5rem] rounded w-full h-full
     }
     .Modal__form-error {

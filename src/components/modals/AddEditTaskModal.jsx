@@ -308,7 +308,7 @@ const AddEditTaskModal = ({
           onClick={(e) => {
             onSubmit(e);
           }}
-          className="Modal__btn Modal__btn-primary Modal__focus w-full mt-[1rem]"
+          className="Modal__btn Modal__btn-primary Modal__focus w-full mt-[1rem] "
         >
           {type === "edit" ? "Update Task" : "Create Task"}
         </button>
