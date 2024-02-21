@@ -61,12 +61,3 @@ Clicking on the ellipses menu in the upper right will open the sign in option; c
 ### Drag n Drop
 Tasks can be reordered in column or between columns. Simple click and hold a task and move it to the desired position. The reordered task state will persist. 
 
-
-
-
-
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
