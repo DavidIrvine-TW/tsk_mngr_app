@@ -26,7 +26,7 @@ yarn dev
 # or
 pnpm dev
 ```
-Open you localhost to see the Kanban app.
+Open localhost to see the Kanban app.
 
 
 ## Kanban Screenshots
